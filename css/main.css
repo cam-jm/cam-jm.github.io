@@ -32,4 +32,9 @@ html {
 }
 
 .uk-nav-divider {
-    border-top: 2px solid #414470}
+    border-top: 2px solid #414470;
+}
+
+.uk-offcanvas-close {
+    color: #ff2844 !important;
+}
