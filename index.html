@@ -1,40 +1,127 @@
 <!DOCTYPE html>
-<html>
-<title>W3.CSS Template</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="css/main.css">
-<style>
-    body,
-    html {
-        height: 100%
-    }
-    
-    .bgimg {
-        background-image: url('images/background.jpg');
-        min-height: 100%;
-        background-position: center;
-        background-size: cover;
-    }
-</style>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+        body,
+        html {
+            height: 100%;
+            padding: 0%;
+            margin: 0%;
+        }
+
+        .hero {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(45, 50, 63);
+            color: white;
+        }
+
+        .hero.bg {
+            width: 100%;
+            height: 100%;
+            min-height: 100%;
+        }
+
+        .hero h1 {
+            color: white;
+        }
+
+        #navbutton {
+            position: fixed;
+            top: 2rem;
+            left: 2rem;
+            z-index: 1;
+            color: white;
+            border-width: 2px;
+            background-color: rgb(45, 50, 63);
+            box-shadow: 0px 0px 0px rgba(50, 42, 85, 0.9);
+            transition: 0.2s cubic-bezier(1, 0, 0, 1);
+        }
+
+        #navbutton:hover {
+            box-shadow: -10px 10px 0px rgb(45, 50, 63);
+        }
+
+        .icon {
+            width: 3rem;
+            height: 3rem;
+            position: absolute;
+        }
+
+        .icon.pruple {
+            width: 3rem;
+            height: 3rem;
+            color: #a97bff;
+            -webkit-filter: drop-shadow(-8px 14px 0px rgba(0, 0, 0, .7));
+            filter: drop-shadow(-8px 14px 2px rgba(0, 0, 0, .7));
+        }
+        .icon.blue {
+            width: 2rem;
+            height: 2rem;
+            color: #008cff;
+            -webkit-filter: drop-shadow(-8px 4px 1px rgba(0, 0, 0, .7));
+            filter: drop-shadow(-2px 4px 1px rgba(0, 0, 0, .7));
+        }
+    </style>
+</head>
 
 <body>
+    <button id="navbutton" class="uk-button uk-button-default" type="button" uk-toggle="target: #sidebar">Menu</button>
+    <div id="sidebar" uk-offcanvas="overlay: true">
+        <div class="uk-offcanvas-bar">
 
-    <div class="bgimg w3-display-container w3-animate-opacity w3-text-grey">
-        <div class="w3-display-topleft w3-padding-large w3-xlarge">
-            Logo
-        </div>
-        <div class="w3-display-middle">
-            <h1 class="w3-jumbo w3-animate-bottom">COMING SOON</h1>
-            <hr class="w3-border-grey" style="margin:auto;width:40%">
-            <p class="w3-large w3-center">Please be patient</p>
-        </div>
-        <div class="w3-display-bottomleft w3-padding-large">
-            Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+
+            <h3>Title</h3>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.</p>
+
         </div>
     </div>
 
+    <div class="hero uk-inline">
+
+        <div class="bg">
+            <i class="icon pruple" data-feather="hexagon" style=" top: 20%; left: 10%;"></i>
+            <i class="icon blue" data-feather="circle" style=" bottom: 20%; left: 30%;"></i>
+            
+        </div>
+
+        <div class="uk-position-top-left uk-overlay"></div>
+
+        <div class="uk-position-center uk-overlay uk-test">
+            <div class="uk-text-center uk-margin-auto-vertical" uk-parallax="opacity: 1,0; viewport: 2">
+                <i class="uk-margin-auto" style="width: 2rem; height: 2rem;" data-feather="thumbs-up"></i>
+                <h1 class="uk-margin-top">Hi there!</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="uk-child-width-expand@s uk-text-center" uk-grid>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Item</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Item</div>
+        </div>
+        <div>
+            <div class="uk-card uk-card-default uk-card-body">Item</div>
+        </div>
+    </div>
+
+    <script>
+        feather.replace();
+    </script>
 </body>
 
 </html>
