@@ -49,7 +49,7 @@
     80% {
         opacity: 0;
         transform: translatex(80%);
-        filter: drop-shadow(-10px 8px 3px #46d4ff);
+        filter: drop-shadow(-10px 8px 3px #46d4ff00);
 
     }
 
