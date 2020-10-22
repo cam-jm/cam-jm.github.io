@@ -3,92 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>C.M | Home</title>
+    <meta name="description" content="C.M. Home Page | Hub of all things random and over-engineered." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/animations.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/js/uikit.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <style>
-        body,
-        html {
-            height: 100%;
-            padding: 0%;
-            margin: 0%;
-        }
-
-        #navbutton {
-            position: fixed;
-            top: 2rem;
-            left: 2rem;
-            z-index: 1;
-            color: white;
-            background-color: transparent;
-            border-width: 2px;
-            box-shadow: 0px 0px 0px rgba(50, 42, 85, 0.9);
-            transition: 0.2s cubic-bezier(1, 0, 0, 1);
-        }
-
-        #navbutton:hover {
-            box-shadow: -10px 10px 0px white;
-        }
-
-        .bg .icon {
-            position: absolute;
-        }
-
-        .icon.hex {
-            width: 3rem;
-            height: 3rem;
-            color: #a97bff;
-            filter: drop-shadow(0px 0px 2px #a97bff);
-            animation: spinhex 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-            -moz-animation: spinhex 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-            -webkit-animation: spinhex 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
-        }
-
-        .icon.sun {
-            width: 4rem;
-            height: 4rem;
-            color: #fff175;
-            animation-duration: 5s;
-            filter: drop-shadow(0px 0px 10px #fff175);
-            animation: spin 20s linear infinite;
-            -moz-animation: spin 20s linear infinite;
-            -webkit-animation: spin 20s linear infinite;
-        }
-
-        .icon.circle {
-            width: 2rem;
-            height: 2rem;
-            color: #8bffd8;
-            animation: bounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
-            -moz-animation: bounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
-            -webkit-animation: bounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
-        }
-
-        .icon.cloud {
-            width: 3rem;
-            height: 3rem;
-            color: #46d4ff;
-            filter: drop-shadow(-8px 8px 3px #46d4ff);
-            animation: glide 10s linear infinite;
-            -moz-animation: glide 10s linear infinite;
-            -webkit-animation: glide 10s linear infinite;
-        }
-
-        .icon.pointer {
-            width: 1.4rem;
-            height: 1.4rem;
-            color: #ffffff;
-            filter: drop-shadow(0px 0px 10px #ffffff88);
-            animation: slide 8s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-            -moz-animation: slide 8s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-            -webkit-animation: slide 8s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
-        }
-    </style>
 </head>
 
 <body>
@@ -110,13 +34,14 @@
                     <li><a href="#"><i class="uk-margin-right" data-feather="smartphone"></i>PinePhone</a></li>
                     <li><a href="#"><i class="uk-margin-right" data-feather="message-square"></i>Nexux Bot</a></li>
                     <li><a href="#"><i class="uk-margin-right" data-feather="code"></i>Templates</a></li>
-                    
+
 
                     <li class="uk-nav-header">Source</li>
                     <li class="uk-nav-divider"></li>
                     <li><a href="https://www.github.com/cam-jm"><i class="uk-margin-right"
                                 data-feather="github"></i>GitHub</a></li>
-                    <li><a href="https://gitlab.com/cm-source"><i class="uk-margin-right" data-feather="gitlab"></i>GitLab</a></li>
+                    <li><a href="https://gitlab.com/cm-source"><i class="uk-margin-right"
+                                data-feather="gitlab"></i>GitLab</a></li>
 
                 </ul>
             </nav>
@@ -127,11 +52,11 @@
     <div class="hero uk-inline">
 
         <div class="bg">
-            <i class="icon hex" data-feather="hexagon" style=" top: 30%; left: 5%;"></i>
-            <i class="icon sun" data-feather="sun" style=" top: 5%; right: 5%;"></i>
-            <i class="icon circle" data-feather="circle" style=" bottom: 8%; left: 25%;"></i>
-            <i class="icon cloud" data-feather="cloud" style=" top: 12%; right: 15%;"></i>
-            <i class="icon pointer" data-feather="mouse-pointer" style=" bottom: 18%; right: 25%;"></i>
+            <i class="icon hex" data-feather="hexagon"></i>
+            <i class="icon sun" data-feather="sun"></i>
+            <i class="icon circle" data-feather="circle"></i>
+            <i class="icon cloud" data-feather="cloud"></i>
+            <i class="icon pointer" data-feather="mouse-pointer"></i>
 
         </div>
 
@@ -139,7 +64,7 @@
 
         <div class="uk-position-center uk-overlay uk-overflow-hidden">
             <div class="uk-text-center uk-margin-auto-vertical">
-                <i class="uk-margin-top" style="width: 2rem; height: 2rem; color: #ff1c73" data-feather="thumbs-up"></i>
+                <i class="uk-margin-top center-icon" data-feather="thumbs-up"></i>
                 <h1 class="uk-margin-top">Hi there!</h1>
             </div>
         </div>

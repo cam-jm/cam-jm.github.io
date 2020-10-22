@@ -1,0 +1,92 @@
+body,
+html {
+    height: 100%;
+    padding: 0%;
+    margin: 0%;
+}
+
+#navbutton {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1;
+    color: white;
+    background-color: transparent;
+    border-width: 2px;
+    box-shadow: 0px 0px 0px rgba(50, 42, 85, 0.9);
+    transition: 0.2s cubic-bezier(1, 0, 0, 1);
+}
+
+#navbutton:hover {
+    box-shadow: -10px 10px 0px white;
+}
+
+.bg .icon {
+    position: absolute;
+}
+
+.center-icon {
+    width: 2.4rem;
+    height: 2.4rem;
+    color: #ff1c73
+}
+
+.icon.hex {
+    top: 30%;
+    left: 5%;
+    width: 3rem;
+    height: 3rem;
+    color: #a97bff;
+    filter: drop-shadow(0px 0px 2px #a97bff);
+    animation: spinhex 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    -moz-animation: spinhex 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    -webkit-animation: spinhex 1s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
+.icon.sun {
+    top: 5%;
+    right: 5%;
+    width: 4rem;
+    height: 4rem;
+    color: #fff175;
+    animation-duration: 5s;
+    filter: drop-shadow(0px 0px 10px #fff175);
+    animation: spin 20s linear infinite;
+    -moz-animation: spin 20s linear infinite;
+    -webkit-animation: spin 20s linear infinite;
+}
+
+.icon.circle {
+    bottom: 8%;
+    left: 25%;
+    width: 2rem;
+    height: 2rem;
+    color: #8bffd8;
+    animation: bounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
+    -moz-animation: bounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
+    -webkit-animation: bounce 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite alternate;
+}
+
+.icon.cloud {
+    top: 12%;
+    right: 15%;
+    width: 3rem;
+    height: 3rem;
+    color: #46d4ff;
+    filter: drop-shadow(-8px 8px 3px #46d4ff);
+    animation: glide 10s linear infinite;
+    -moz-animation: glide 10s linear infinite;
+    -webkit-animation: glide 10s linear infinite;
+}
+
+.icon.pointer {
+    bottom: 18%;
+    right: 25%;
+    width: 1.4rem;
+    height: 1.4rem;
+    color: #ffffff;
+    filter: drop-shadow(0px 0px 10px #ffffff88);
+    animation: slide 8s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    -moz-animation: slide 8s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+    -webkit-animation: slide 8s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+}
