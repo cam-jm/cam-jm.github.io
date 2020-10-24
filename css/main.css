@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway&display=swap');
 
 html {
     margin: 0;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
 }
 
-.hero h1 {
-    color: white;
+.hero {
+    font-family: 'Raleway', sans-serif;
+}
+
+.hero .title {
+    font-size: 2.4rem;
 }
 
 .uk-offcanvas-bar {
@@ -20,42 +24,97 @@ html {
 }
 
 .uk-nav-divider {
-    border-top: 2px solid #414470;}
+    border-top: 2px solid #414470;
+}
 
-    .navbutton {
-        position: fixed;
-        top: 2rem;
-        left: 2rem;
-        z-index: 1;
-        color: #2d323f;
-        border: 2px solid #414470;
-        background-color: transparent;
-        border-width: 2px;
-        box-shadow: 0px 0px 0px rgba(50, 42, 85, 0.9);
-        transition: 0.2s cubic-bezier(1, 0, 0, 1);
-    }
-    
-    .navbutton:hover {
-        box-shadow: -5px 5px 0px #41447040, 3px -3px 0px #41447020;
-        background-color: #414470;
-        color: white;
-    }
+.navbutton {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1;
+    color: #2d323f;
+    border: 2px solid #414470;
+    background-color: transparent;
+    border-width: 2px;
+    box-shadow: 0px 0px 0px rgba(50, 42, 85, 0.9);
+    transition: 0.2s cubic-bezier(1, 0, 0, 1);
+}
 
-    .navbutton.dark {
-        position: fixed;
-        top: 2rem;
-        left: 2rem;
-        z-index: 1;
-        color: white;
-        border: 2px solid white;
-        background-color: transparent;
-        border-width: 2px;
-        box-shadow: 0px 0px 0px rgba(50, 42, 85, 0.9);
-        transition: 0.2s cubic-bezier(1, 0, 0, 1);
-    }
-    
-    .navbutton.dark:hover {
-        box-shadow: -5px 4px 0px #ffffff40, 4px -3px 0px #ffffff20;
-        background-color: #414470;
-        color: white;
-    }
+.navbutton:hover {
+    box-shadow: -5px 5px 0px #41447040, 3px -3px 0px #41447020;
+    background-color: #414470;
+    color: white;
+}
+
+.navbutton.dark {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    border-width: 2px;
+    box-shadow: 0px 0px 0px rgba(50, 42, 85, 0.9);
+    transition: 0.2s cubic-bezier(1, 0, 0, 1);
+}
+
+.navbutton.dark:hover {
+    box-shadow: -5px 4px 0px #ffffff40, 4px -3px 0px #ffffff20;
+    background-color: #414470;
+    color: white;
+}
+
+.navbutton.light {
+    position: fixed;
+    top: 2rem;
+    left: 2rem;
+    z-index: 1;
+    color: #101010;
+    border: 2px solid #2d323f;
+    background-color: #f0f0f0;
+    border-width: 2px;
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.9);
+    transition: 0.2s cubic-bezier(1, 0, 0, 1);
+}
+
+.navbutton.light:hover {
+    box-shadow: -5px 4px 0px #00000040, 4px -3px 0px #00000020;
+    background-color: #2d323f;
+    border-color: white;
+    color: white;
+}
+
+.uk-card {
+    overflow: hidden;
+    border: 1px solid #0004;
+}
+
+/* Background colours */
+
+.bg-glass {
+    background-color: #ecececcc;
+    backdrop-filter: grayscale(100%);
+}
+
+.bg-purple {
+    background-color: #414470;
+}
+
+.bg-blue {
+    background-color: #1f487e;
+}
+
+.bg-dark {
+    background-color: #192131;
+}
+
+/* Text colours */
+
+.fg-white {
+    color: #ffffff !important;
+}
+
+.fg-black {
+    color: #101010 !important;
+}
