@@ -9,22 +9,11 @@
 }
 
 @keyframes spinhex {
-    0% {
+    from {
         transform: rotate(0deg);
     }
 
-    30% {
-        transform: rotate(90deg);
-    }
-
-    50% {
-        transform: rotate(90deg);
-    }
-
-    80% {
-        transform: rotate(180deg);
-    }
-    100% {
+    to {
         transform: rotate(180deg);
     }
 }
@@ -45,8 +34,8 @@
 @keyframes glide {
     0% {
         opacity: 0;
-        transform: translatex(-20%);
-        filter: drop-shadow(40px 8px 3px #46d4ffff);
+        transform: translatex(-80%);
+        filter: drop-shadow(30px 8px 3px #ffffff);
     }
 
     10% {
@@ -59,8 +48,8 @@
 
     80% {
         opacity: 0;
-        transform: translatex(20%);
-        filter: drop-shadow(-60px 8px 3px #ffffff00);
+        transform: translatex(80%);
+        filter: drop-shadow(-10px 8px 3px #46d4ff00);
 
     }
 
@@ -74,64 +63,20 @@
         transform: translate(-8px, -10px);
     }
 
-    1% {
-        transform: translate(-8px, -10px);
-        filter: drop-shadow(0px 0px 4px #ffffffff);
-    }
-
-    5% {
-        transform: translate(-8px, -10px);
-        filter: drop-shadow(0px 0px 10px #ffffff88);
-    }
-
     25% {
         transform: translate(18px, 10px);
-        filter: drop-shadow(0px 0px 10px #ffffff88);
-    }
-
-    26% {
-        transform: translate(18px, 10px);
-        filter: drop-shadow(0px 0px 4px #ffffffff);
-    }
-
-    30% {
-        transform: translate(18px, 10px);
-        filter: drop-shadow(0px 0px 10px #ffffff88);
     }
 
     50% {
         transform: translate(4px, 2px);
-        filter: drop-shadow(0px 0px 10px #ffffff88);
-    }
-
-    51% {
-        transform: translate(4px, 2px);
-        filter: drop-shadow(0px 0px 4px #ffffffff);
-    }
-
-    55% {
-        transform: translate(4px, 2px);
-        filter: drop-shadow(0px 0px 10px #ffffff88);
     }
 
     75% {
         transform: translate(20px, -2px);
-        filter: drop-shadow(0px 0px 10px #ffffff88);
-    }
-
-    76% {
-        transform: translate(20px, -2px);
-        filter: drop-shadow(0px 0px 4px #ffffffff);
-    }
-
-    80% {
-        transform: translate(20px, -2px);
-        filter: drop-shadow(0px 0px 10px #ffffff88);
     }
 
     100% {
         transform: translate(-8px, -10px);
-        filter: drop-shadow(0px 0px 10px #ffffff88);
     }
 
 }
