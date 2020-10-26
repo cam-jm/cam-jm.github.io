@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>C.M | Home</title>
-    <meta name="description" content="C.M. Home Page | Hub of all things random and over-engineered." />
+    <title>C.M.</title>
+    <meta name="description" content="Linux, Web, Cake." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.5.9/dist/css/uikit.min.css" />
     <link rel="stylesheet" href="css/main.css" />
@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <button class="uk-button navbutton dark" type="button" uk-toggle="target: #sidebar">Menu</button>
+    <button class="uk-button navbutton clear" type="button" uk-toggle="target: #sidebar">Menu</button>
     <div id="sidebar" uk-offcanvas="overlay: true">
         <div class="uk-offcanvas-bar">
 
@@ -52,19 +52,22 @@
 
         <div class="bg">
             <i class="icon hex" data-feather="hexagon"></i>
-            <i class="icon sun" data-feather="sun"></i>
+            <i class="icon uk-animation-fade sun" data-feather="sun"></i>
             <i class="icon circle" data-feather="circle"></i>
             <i class="icon cloud" data-feather="cloud"></i>
             <i class="icon pointer" data-feather="mouse-pointer"></i>
 
         </div>
 
-        <div class="uk-position-top-left uk-overlay"></div>
+        <div class="uk-position-bottom-right uk-overlay">
+            <p class="uk-text-meta upsidedown">Made in Australia</p>
+        </div>
 
         <div class="uk-position-center uk-overlay uk-overflow-hidden">
             <div class="uk-text-center uk-margin-auto-vertical">
-                <i class="uk-margin-top center-icon" data-feather="thumbs-up"></i>
+                <i class="uk-margin-top center-icon uk-animation-slide-bottom-small" data-feather="gift"></i>
                 <h1 class="uk-margin-top">Hi there!</h1>
+                <p class="subtitle">Linux, Web, Cake</p>
             </div>
         </div>
     </div>
