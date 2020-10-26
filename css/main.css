@@ -81,7 +81,8 @@ html {
 
 .navbutton.clear:hover {
     box-shadow: -5px 4px 0px #ffffff40, 4px -3px 0px #ffffff20;
-    background-color: #414470;
+    background-color: #10101099;
+    backdrop-filter: grayscale(100%);
     color: white;
 }
 
