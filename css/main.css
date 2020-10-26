@@ -9,8 +9,16 @@ html {
     font-family: 'Raleway', sans-serif;
 }
 
+
+.hero .big-icon {
+    width: 3rem;
+    height: 3rem;
+    margin: auto;
+}
 .hero .title {
+    margin-top: 4px;
     font-size: 2.4rem;
+    margin-bottom: 4px;
 }
 
 .uk-offcanvas-bar {
@@ -29,28 +37,24 @@ html {
 
 .navbutton {
     position: fixed;
-    top: 2rem;
-    left: 2rem;
+    top: 1rem;
+    left: 1rem;
     z-index: 1;
-    color: #2d323f;
-    border: 2px solid #414470;
-    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    background-color: #414470;
     border-width: 2px;
     box-shadow: 0px 0px 0px rgba(50, 42, 85, 0.9);
     transition: 0.2s cubic-bezier(1, 0, 0, 1);
 }
 
 .navbutton:hover {
-    box-shadow: -5px 5px 0px #41447040, 3px -3px 0px #41447020;
-    background-color: #414470;
-    color: white;
+    box-shadow: -5px 4px 0px #ffffff40, 4px -3px 0px #ffffff20;
+    background-color: white;
+    color: #414470;
 }
 
-.navbutton.dark {
-    position: fixed;
-    top: 2rem;
-    left: 2rem;
-    z-index: 1;
+.navbutton.clear {
     color: white;
     border: 2px solid white;
     background-color: transparent;
@@ -59,17 +63,13 @@ html {
     transition: 0.2s cubic-bezier(1, 0, 0, 1);
 }
 
-.navbutton.dark:hover {
+.navbutton.clear:hover {
     box-shadow: -5px 4px 0px #ffffff40, 4px -3px 0px #ffffff20;
     background-color: #414470;
     color: white;
 }
 
 .navbutton.light {
-    position: fixed;
-    top: 2rem;
-    left: 2rem;
-    z-index: 1;
     color: #101010;
     border: 2px solid #2d323f;
     background-color: #f0f0f0;
@@ -97,7 +97,7 @@ html {
 }
 
 .bg-blue {
-    background-color: #1f487e;
+    background: #185282;
 }
 
 .bg-dark {
