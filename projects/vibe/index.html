@@ -31,7 +31,7 @@
             font-size: 38px;
             font-family: 'Press Start 2P', monospace;
             animation: glow 1s ease-in-out infinite alternate;
-            
+
         }
 
         #button {
@@ -47,20 +47,19 @@
             border-radius: 0px;
             padding: 14px 16px;
             position: absolute;
-            bottom: 50px;
+            bottom: 40px;
             left: 50%;
             transform: translateX(-50%);
-            transition: 0.3s cubic-bezier(0.68,-0.55,0.27,1.55);
+            transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
         }
 
         #button:hover {
             letter-spacing: 0.3rem;
-            border-radius: 4px;
             border: 2px solid;
             padding: 10px 26px;
             text-shadow: 0px 0px 0px #fff0;
-            box-shadow: 0px 0px 0px #fff0;
-            bottom: 55px;
+            box-shadow: 0px 0px 10px #fff, inset 0px 0px -5px;
+            bottom: 45px;
         }
 
         .hide {
@@ -101,20 +100,15 @@
         const burst = new mojs.Burst({
             left: 0,
             top: 0,
-            radius: {
-                4: 19
-            },
-            angle: 'rand(0,90)',
             children: {
                 shape: 'line',
                 radius: 3,
                 scale: 1,
-                stroke: '#FD7932',
                 strokeDasharray: '100%',
                 strokeDashoffset: {
                     '-100%': '100%'
                 },
-                duration: 700,
+                duration: 400,
                 easing: 'quad.out',
             }
         });
@@ -122,18 +116,34 @@
         var music = new Audio('https://github.com/tholman/elevator.js/raw/master/demo/music/elevator.mp3');
         var ding = new Audio('https://github.com/tholman/elevator.js/raw/master/demo/music/ding.mp3');
 
+        //Animation around pointer
         document.addEventListener('click', function (e) {
             burst
                 .tune({
                     x: e.pageX,
-                    y: e.pageY
+                    y: e.pageY,
+                    radius: {
+                        'rand(4,8)': 'rand(9,20)'
+                    },
+                    angle: 'rand(0,280)',
+                    children: {
+                        stroke: randomColour(),
+                    }
                 })
                 .replay();
         });
 
         //Utility functions
-        function randomInt(min, max) { // min and max included 
+        function randomInt(min, max) {
             return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        function randomCoord(dim) {
+            if (dim == 'x') {
+                return randomInt(-((window.innerWidth / 2) - 100), (window.innerWidth / 2) - 100);
+            } else if (dim == 'y') {
+                return randomInt(-((window.innerHeight / 2) - 100), (window.innerHeight / 2) - 100)
+            }
         }
 
         function randomColour() {
@@ -164,8 +174,8 @@
                     0: 1
                 },
                 duration: 'rand(500,1500)',
-                x: 'rand(-300,300)',
-                y: 'rand(-200,200)',
+                x: randomCoord('x'),
+                y: randomCoord('y'),
                 easing: 'cubic.out',
             }).play();
         }
@@ -182,8 +192,8 @@
                     points: 'rand(4,8)',
                     fill: randomColour()
                 },
-                x: 'rand(-300,300)',
-                y: 'rand(-200,200)',
+                x: randomCoord('x'),
+                y: randomCoord('y'),
                 duration: 'rand(100,1000)',
             }).play();
 
@@ -196,6 +206,8 @@
             var loopCounter = 1
             music.play();
 
+            console.log('start animation');
+
             function animationLoop() {
                 setTimeout(function () {
                     firework();
@@ -204,14 +216,16 @@
                     if (loopCounter < 30) {
                         animationLoop();
                     } else {
-                        music.pause();
-                        music.currentTime = 0;
-                        ding.play();
+                        //Animation done
+                        document.getElementById('background').innerHTML = '';
                         document.getElementById('text').classList.add('hide');
                         document.getElementById('button').classList.remove('hide');
-                        console.log('show');
+                        music.pause();
+                        music.currentTime = 0;
+                        console.log('done animation');
+                        ding.play();
                     }
-                }, randomInt(100, 500))
+                }, randomInt(100, 400))
             }
             animationLoop(music);
         }
