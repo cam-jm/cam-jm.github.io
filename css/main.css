@@ -1,0 +1,81 @@
+/* Main file for general theming, bootstrap tweaks, etc. */
+
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+html,
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+.section-heading {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* Tweak navbar */
+.navbar {
+    padding: 0px;
+}
+
+nav {
+    background: rgba(255, 255, 255, 0.7);
+    color: black;
+    position: absolute;
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+}
+
+nav a,
+nav a:hover {
+    color: black !important;
+    text-decoration: none;
+}
+
+nav a:hover {
+    opacity: 0.8;
+}
+
+nav .logo {
+    height: 22px;
+}
+
+/*space behind navbar */
+.nav-spacer {
+    height: 40px;
+    background-color: white;
+}
+
+/* Main content wrappper */
+.content {
+    margin: auto;
+    max-width: 1000px;
+}
+
+/* Landing page hero */
+#landing-hero {
+    color: white;
+    background: rgb(167, 92, 227);
+    background: linear-gradient(47deg, rgba(167, 92, 227, 1) 0%, rgba(52, 136, 214, 1) 35%, rgba(3, 207, 172, 1) 100%);
+    width: 100%;
+    padding: 10vh 0px;
+    display: table;
+    align-items: center;
+    text-align: center;
+}
+
+/* Project cards */
+.project-card {
+    border-radius: 10px;
+    margin-bottom: 24px;
+    overflow: hidden;
+}
+
+.project-card .project-img {
+    max-height: 350px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    object-fit: contain;
+}
