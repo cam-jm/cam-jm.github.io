@@ -1,25 +1,79 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Hey</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/grid.css"
-    <link rel="stylesheet" href="css/colours.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hello, world!</title>
+
+  <!-- Bootstrap & Co -->
+  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <div class="m-center">
-        <img src="void.svg" alt="void logo">
+  <nav class="navbar fixed-top navbar-expand-md navbar-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img class="logo" src="img/void-black.svg" alt="Void"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">GitHub</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              Projects
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Cloud</a></li>
+              <li><a class="dropdown-item" href="#">Void</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Vibes</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-    <div class="row">
-        <div class="col-2 bg-purple">
-            <p>1 awefkjhwbe fljabefj haefj awe</p>
+  </nav>
+
+  <div class="nav-spacer"></div>
+
+  <div id="landing-hero">
+    <div>
+      <h1>Hey</h1>
+      <p>What brings you here?</p>
+    </div>
+  </div>
+
+  <div class="container-md">
+    <h2 class="section-heading">Recent Projects</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm project-card">
+          <img class="project-img" src="img/page-vibe.png" alt="vibe webpage">
         </div>
+        <div class="col-sm project-card">
+          <img class="project-img" src="img/page-void.png" alt="vibe webpage">
+        </div>
+        <div class="col-sm project-card">
+          <img class="project-img" src="img/page-host.png" alt="vibe webpage">
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Bootstrap -->
+  <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
