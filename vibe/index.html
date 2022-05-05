@@ -118,18 +118,17 @@
 
         //Animation around pointer
         document.addEventListener('click', function (e) {
-            burst
-                .tune({
-                    x: e.pageX,
-                    y: e.pageY,
-                    radius: {
-                        'rand(4,8)': 'rand(9,20)'
-                    },
-                    angle: 'rand(0,280)',
-                    children: {
-                        stroke: randomColour(),
-                    }
-                })
+            burst.tune({
+                x: e.pageX,
+                y: e.pageY,
+                radius: {
+                    'rand(4,8)': 'rand(9,20)'
+                },
+                angle: 'rand(0,280)',
+                children: {
+                    stroke: randomColour(),
+                }
+            })
                 .replay();
         });
 
@@ -183,6 +182,7 @@
         //Generate confetti
         function confetti() {
             new mojs.Burst({
+                parent: '#background',
                 radius: {
                     0: 'rand(20, 60)'
                 },
@@ -206,8 +206,6 @@
             var loopCounter = 1
             music.play();
 
-            console.log('start animation');
-
             function animationLoop() {
                 setTimeout(function () {
                     firework();
@@ -222,16 +220,13 @@
                         document.getElementById('button').classList.remove('hide');
                         music.pause();
                         music.currentTime = 0;
-                        console.log('done animation');
                         ding.play();
                     }
                 }, randomInt(100, 400))
             }
             animationLoop();
+            document.getElementById
         }
-
-        //Get this 'party :/' started...
-        //partyTime();
     </script>
 </body>
 
