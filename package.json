@@ -1,0 +1,30 @@
+{
+  "name": "cam-jm.github.io",
+  "version": "1.0.0",
+  "description": "site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tailwind-dev": "npx tailwindcss -i ./src/main.css -o main.css --watch",
+    "tailwind-build": "npx tailwindcss -i ./src/main.css -o main.css --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cam-jm/cam-jm.github.io.git"
+  },
+  "keywords": [
+    "website",
+    "html",
+    "css",
+    "tailwind"
+  ],
+  "author": "CM",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cam-jm/cam-jm.github.io/issues"
+  },
+  "homepage": "https://github.com/cam-jm/cam-jm.github.io#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.24"
+  }
+}

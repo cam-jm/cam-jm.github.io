@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe correctly</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0%;
+            background-color: #273445;
+        }
+
+        #background {
+            width: 100%;
+            height: 100%;
+        }
+
+        #text {
+            text-align: center;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #ffffff;
+            text-shadow: 0px 0px 3px #68e1ff, 0px 0px 12px #2ed5ff;
+            font-size: 38px;
+            font-family: 'Press Start 2P', monospace;
+            animation: glow 1s ease-in-out infinite alternate;
+
+        }
+
+        #button {
+            /*opacity: 0;*/
+            bottom: 50px;
+            color: white;
+            font-size: 22px;
+            font-family: 'Press Start 2P', monospace;
+            text-shadow: 0px 0px 5px #8f67fc;
+            background-color: transparent;
+            border: 4px solid #e7deff;
+            box-shadow: 0px 0px 4px #c2acff, inset 0px 0px 4px #d2c1ff;
+            border-radius: 0px;
+            padding: 14px 16px;
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+        }
+
+        #button:hover {
+            letter-spacing: 0.3rem;
+            border: 2px solid;
+            padding: 10px 26px;
+            text-shadow: 0px 0px 0px #fff0;
+            box-shadow: 0px 0px 10px #fff, inset 0px 0px -5px;
+            bottom: 45px;
+        }
+
+        .hide {
+            opacity: 0;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0px 0px 3px #68e1ff, 0px 0px 12px #2ed5ff;
+            }
+
+            to {
+                text-shadow: 0px 0px 5px #aaeeff, 0px 0px 20px #68e1ff;
+            }
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="background"></div>
+    <p id="text" class="hide">positive vibes only</p>
+
+    <button id="button" onclick="partyTime()">Play</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mojs/core"></script>
+    <script>
+        //Vars
+        const burst = new mojs.Burst({
+            left: 0,
+            top: 0,
+            children: {
+                shape: 'line',
+                radius: 3,
+                scale: 1,
+                strokeDasharray: '100%',
+                strokeDashoffset: {
+                    '-100%': '100%'
+                },
+                duration: 400,
+                easing: 'quad.out',
+            }
+        });
+
+        var music = new Audio('https://github.com/tholman/elevator.js/raw/master/demo/music/elevator.mp3');
+        var ding = new Audio('https://github.com/tholman/elevator.js/raw/master/demo/music/ding.mp3');
+
+        //Animation around pointer
+        document.addEventListener('click', function (e) {
+            burst
+                .tune({
+                    x: e.pageX,
+                    y: e.pageY,
+                    radius: {
+                        'rand(4,8)': 'rand(9,20)'
+                    },
+                    angle: 'rand(0,280)',
+                    children: {
+                        stroke: randomColour(),
+                    }
+                })
+                .replay();
+        });
+
+        //Utility functions
+        function randomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) + min);
+        }
+
+        function randomCoord(dim) {
+            if (dim == 'x') {
+                return randomInt(-((window.innerWidth / 2) - 100), (window.innerWidth / 2) - 100);
+            } else if (dim == 'y') {
+                return randomInt(-((window.innerHeight / 2) - 100), (window.innerHeight / 2) - 100)
+            }
+        }
+
+        function randomColour() {
+            var colours = [
+                '#ed5353',
+                '#ffa154',
+                '#ffe16b',
+                '#9bdb4d',
+                '#43d6b5',
+                '#64baff',
+                '#cd9ef7',
+                '#f4679d'
+            ]
+            return colours[randomInt(0, colours.length)];
+        }
+
+        //Generate firefox
+        function firework() {
+            new mojs.Shape({
+                parent: '#background',
+                fill: 'none',
+                stroke: randomColour(),
+                radius: 'rand(20,80)',
+                strokeWidth: {
+                    60: 0
+                },
+                scale: {
+                    0: 1
+                },
+                duration: 'rand(500,1500)',
+                x: randomCoord('x'),
+                y: randomCoord('y'),
+                easing: 'cubic.out',
+            }).play();
+        }
+
+        //Generate confetti
+        function confetti() {
+            new mojs.Burst({
+                radius: {
+                    0: 'rand(20, 60)'
+                },
+                count: 'rand(2, 6)',
+                children: {
+                    shape: 'rect',
+                    points: 'rand(4,8)',
+                    fill: randomColour()
+                },
+                x: randomCoord('x'),
+                y: randomCoord('y'),
+                duration: 'rand(100,1000)',
+            }).play();
+
+        }
+
+        function partyTime() {
+            document.getElementById('text').classList.remove('hide');
+            document.getElementById('button').classList.add('hide');
+
+            var loopCounter = 1
+            music.play();
+
+            console.log('start animation');
+
+            function animationLoop() {
+                setTimeout(function () {
+                    firework();
+                    confetti();
+                    loopCounter++;
+                    if (loopCounter < 30) {
+                        animationLoop();
+                    } else {
+                        //Animation done
+                        document.getElementById('background').innerHTML = '';
+                        document.getElementById('text').classList.add('hide');
+                        document.getElementById('button').classList.remove('hide');
+                        music.pause();
+                        music.currentTime = 0;
+                        console.log('done animation');
+                        ding.play();
+                    }
+                }, randomInt(100, 400))
+            }
+            animationLoop();
+        }
+
+        //Get this 'party :/' started...
+        //partyTime();
+    </script>
+</body>
+
+</html>

@@ -1,79 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hello, world!</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey there</title>
 
-  <!-- Bootstrap & Co -->
-  <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./main.css" />
 </head>
 
 <body>
-  <nav class="navbar fixed-top navbar-expand-md navbar-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img class="logo" src="img/void-black.svg" alt="Void"></a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="/">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="https://github.com/cam-jm">GitHub</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button"
-              data-bs-toggle="dropdown" aria-expanded="false">
-              Projects
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="/projects/vibe/">Vibes</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="/projects/void/">Void</a></li>
-              <li><a class="dropdown-item" href="/projects/host/">Host</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+    <div id="splash" class="splash">
+        <div class="splash-inner">
+            <h1 class="title">Hey there</h1>
+            <p id="splash-text" class="subtitle">Linux &#183; Cake &#183; Lo-Fi</p>
+            <div class="links">
+                <a class="button" href="https://www.github.com/cam-jm">GitHub</a>
+                <a class="button" href="/vibe/">Vibes</a>
+
+            </div>
+        </div>
     </div>
-  </nav>
 
-  <div class="nav-spacer"></div>
-
-  <div id="landing-hero">
-    <div>
-      <h1>Hey</h1>
-      <p>What brings you here?</p>
-    </div>
-  </div>
-
-  <div class="container-md">
-    <h2 class="section-heading">Recent Projects</h2>
-    <div class="container">
-      <div class="row">
-        <a href="/projects/vibe" class="col-sm project-card">
-          <img class="project-img" src="img/page-vibe.png" alt="vibe webpage">
-        </a>
-        <a href="/projects/void" class="col-sm project-card">
-          <img href="/projects/void" class="project-img" src="img/page-void.png" alt="void webpage">
-        </a>
-        <a href="/projects/host" class="col-sm project-card">
-          <img href="/projects/host" class="project-img" src="img/page-host.png" alt="host webpage">
-        </a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Bootstrap -->
-  <script src="js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script>
+        var flavours = [
+            "Hot Chocolate &#183; Cake &#183; Lo-Fi",
+            "Not going to find much...",
+            "Tailwind CSS is rather neat",
+            "Generated styles get long without minifying",
+            "&#34;I the reject reality, and substitute my own&#34;",
+            "You have been chosen. good luck...",
+            "Random flavour text go!",
+            "Java &#34;powering 3 billion devices&#34; for how long now?",
+            "No Steve, <b>you're</b> holding it wrong!",
+            "Have a cookie 🍪️",
+            "Good game: Ori and the Will of the Wisps",
+            "this line of text is just one of several possibilities.",
+            "☕️",
+            "Free from intentional cookies, remote fonts, and server nonsense"
+        ]
+        //Pick random item from flavours
+        document.getElementById("splash-text").innerHTML = flavours[Math.floor(Math.random() * flavours.length)]
+    </script>
 </body>
 
 </html>
