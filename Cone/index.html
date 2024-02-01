@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cone Lore</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+    </style>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body onclick="cycleDialogue()">
+
+    <div id="particles"></div>
+    <img class="cones" src="cones-outline.svg" />
+
+
+    <div class="container">
+        <!-- Dialogue boxes -->
+        <div id="0" class="dialogue">
+            <h1>Welcome</h1>
+        </div>
+        <div id="1" class="dialogue">
+            <h1></h1>
+            <p>Keep going</p>
+        </div>
+        <div id="2" class="dialogue">
+            <p>Tutorial complete</p>
+        </div>
+
+        <div id="3" class="dialogue">
+            <p>Loops back at the end 👍</p>
+        </div>
+
+        <div id="4" class="dialogue">
+            <p>Common citizens lack concious cognitive awareness of the cone.</p>
+        </div>
+        <div id="5" class="dialogue">
+            <p>Commoners consitently relying on conjectors of cracked concrete ideals and coarsely-textured politics.
+            </p>
+        </div>
+        <div id="6" class="dialogue">
+            <p>You, conscious one, will not conceed to such casual concious deregard to our conical carers.</p>
+        </div>
+        <div id="7" class="dialogue">
+            <p>Colour, city, citizenry, chronographic properties. All cones considered and communicated.</p>
+        </div>
+        <div id="8" class="dialogue">
+            <p>Carefully curated words creating creatively crafted content.</p>
+        </div>
+        <div id="9" class="dialogue">
+            <p>Conveying the silent, eternal, care and benevolent coercion from the circularly pointed guardians.</p>
+        </div>
+        <div id="10" class="dialogue">
+            <p>So congratulations, cone-concious citizen.</p>
+        </div>
+        <div id="11" class="dialogue">
+            <p>Your creation created copious comedy with your conical-considerate creation. Celebrative of a
+                chronographic milestone, no less. </p>
+        </div>
+        <div id="12" class="dialogue">
+            <p>The Collective Cone Conciousness acknowledges your cognicance of the Cone.</p>
+        </div>
+        <div id="13" class="dialogue">
+            <p>The Cone Consortium rewards such creative creations of communications.</p>
+        </div>
+        <div id="14" class="dialogue">
+            <p>May the cones guide you away from the careless neglect cratering citizen-centric travel infrastructure,
+                oh conical-concious creative creation of new-found cone universe canon.</p>
+        </div>
+
+        <div id="15" class="dialogue">
+            <img class="emblem" src="cones-fill.svg">
+        </div>
+
+        <p id="hint">Tap to continue</p>
+
+    </div>
+    <script src="./particles.min.js"></script>
+
+    <script>
+
+        /* Dafault vars */
+        var dialogueIndex = 0;
+        var ready = false;
+        const music = new Audio("music.m4a");
+        const particleSettings = {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 500
+                    }
+                },
+                "color": {
+                    "value": "#ca6f6f"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    },
+                    "image": {
+                        "src": "img/github.svg",
+                        "width": 100,
+                        "height": 100
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": false,
+                    "distance": 150,
+                    "color": "#ffffff",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "top",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": false,
+                        "mode": "bubble"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "grab": {
+                        "distance": 400,
+                        "line_linked": {
+                            "opacity": 1
+                        }
+                    },
+                    "bubble": {
+                        "distance": 167.83216783216784,
+                        "size": 11.988011988011989,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": {
+                        "distance": 200,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    },
+                    "remove": {
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        }
+
+        /* Start particles (made invisable in css) */
+        particlesJS('particles', particleSettings, function () {
+            console.log('callback - particles.js config loaded');
+        });
+
+        function cycleDialogue() {
+
+            //Remove shown from current dialogue element
+            document.getElementById(dialogueIndex).style.opacity = 0;
+
+            //Inc diag index
+            dialogueIndex += 1;
+            console.log(dialogueIndex)
+
+            //Show new dialogue
+            switch (dialogueIndex) {
+                case 2:
+                    document.getElementById('hint').style.display = 'none';
+                    break;
+                case 4:
+                    music.play();
+                    document.getElementById('particles').style.opacity = 1;
+                    break;
+                case 16:
+                    dialogueIndex = 4;
+                    music.stop();
+                    break;
+            }
+
+            setTimeout(function () {
+                document.getElementById(dialogueIndex).style.opacity = 1;
+            }, 1000);
+        }
+
+        window.addEventListener('load', function () {
+            setTimeout(function () {
+                document.getElementById('0').style.opacity = 1;
+            }, 1000);
+            setTimeout(function () {
+                document.getElementById('hint').style.display = 'unset';
+            }, 2000);
+        });
+
+    </script>
+</body>
+
+</html>
+
+<!--
+    Common citizens lack concious cognitive awareness of the cone.
+
+Commoners consitently relying on conjectors of cracked concrete ideals and coarsely-textured politics.
+
+You, conscious one, will not conceed to such casual concious deregard to our conical carers.
+
+Colour, city, citizenry, chronographic properties. All cones considered and communicated.
+
+Carefully curated words creating creatively crafted content. Conveying the silent, eternal, care and benevolent coercion from the circularly pointed guardians.
+
+So congratulations, cone-concious citizen.
+
+Your creation created copious comedy with your conical-considerate creation. Celebrative of a chronographic milestone, no less.
+
+The Collective Cone Conciousness acknowledges your cognicance of the Cone.
+
+The Cone Consortium rewards such creative creations of communications.
+
+May the cones guide you away from the careless neglect cratering citizen-centric travel infrastructure, oh conical-concious creative creation of new-found cone universe canon.
+-->
