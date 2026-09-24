@@ -1,0 +1,81 @@
+.font-lexend {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.font-m-plus-1 {
+    font-family: "M PLUS 1", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.font-share-tech-mono {
+    font-family: "Share Tech Mono", monospace;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+.size-title {
+    font-size: 4em;
+    font-weight: 600;
+    white-space: pre-line;
+    max-width: 1020px;
+    width: 100%;
+    margin: auto;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 2.0rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.4rem;
+}
+
+h6 {
+    font-size: 1.2rem;
+}
+
+p {
+    font-size: 18px;
+}
+
+body,
+html {
+    height: 100vmin;
+}
+
+.splash {
+    height: 100vh;
+    padding: 10%;
+    box-sizing: border-box;
+    display: grid;
+    align-items: center;
+}
+
+.splash-inner {
+    display: grid;
+    height: 100%;
+    max-width: 768px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    align-content: center;
+    border-left: 4px solid rgb(14 165 233);
+    padding-left: 1.5rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-duration: .2s
+}
